@@ -104,9 +104,19 @@ body {
   background-color: var(--background-color);
   padding: var(--default-padding);
   position: absolute;
-  display: none;
+  visibility: hidden;
 }
 
 .user-menu:hover .user-menu-detail {
-  display: block;
+  visibility: visible;
+  animation: fade-in-user-menu 1s linear both;
+}
+
+@keyframes fade-in-user-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
