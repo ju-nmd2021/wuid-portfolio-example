@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Serif&display=swap');
+
+body {
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --default-padding: 20px;
+  margin: 0;
+}
+
+/* Overall Grid Layout */
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header header header"
+    ". content ."
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--default-padding);
+}
+
+.main {
+  grid-area: content;
+  background-color: blueviolet;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: crimson;
+}
+
+/* Navigation */
+
+.logo {
+
+}
+
+.large-menu-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  height: 50px;
+}
+
+.large-menu-item:first-of-type {
+  margin-left: var(--default-padding);
+}
+
+.large-menu-item:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* Small Menu */
+
+#small-menu-toggle {
+  display: none;
+}
+
+#small-menu-toggle:checked ~ .small-menu-list {
+  display: flex;
+}
+
+.small-menu-image {
+  cursor: pointer;
+}
+
+.small-menu-list {
+  /* visibility: hidden; */
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+}
