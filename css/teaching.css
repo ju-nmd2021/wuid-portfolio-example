@@ -1,0 +1,46 @@
+body {
+  background-image: url(../images/background-teaching.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--default-padding);
+}
+
+.course-item {
+  max-width: 360px;
+  background-color: var(--background-color);
+}
+
+.course-image {
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+}
+
+.course-wuid-image {
+  background-image: url(../images/preview-wuid.jpg);
+}
+
+.course-info {
+  padding: var(--default-padding);
+}
+
+.course-name {
+  margin: 0;
+  margin-bottom: 0.8em;
+}
+
+.course-university {
+  display: inline;
+}
+
+.course-year {
+  display: inline;
+  float: right;
+  margin: 0;
+}
