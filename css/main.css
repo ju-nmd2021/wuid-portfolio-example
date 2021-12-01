@@ -86,4 +86,27 @@ body {
   /* display: flex; */
   display: none;
   flex-direction: column;
+  background-color: var(--background-color);
+  padding: var(--default-padding);
+  position: absolute;
+}
+
+.small-menu-item {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+/* User Menu */
+
+.user-menu-detail {
+  background-color: var(--background-color);
+  padding: var(--default-padding);
+  position: absolute;
+  display: none;
+}
+
+.user-menu:hover .user-menu-detail {
+  display: block;
 }
